@@ -11,7 +11,7 @@ guesses=set()
 
 print("Welcome to the Word Game!")
 print("The word is a fruit.")
-print("You have 6 attempts to guess the word.")
+print("You have 6 Lives.")
 print("Good luck!")
 
 #__________________________________________________
@@ -22,7 +22,7 @@ def masked_word(answer, guesses):
 
     for letter in answer:       
 
-        if letter in guesses: 
+        if letter in guesses:       
 
             masked = masked + letter           
 
@@ -63,7 +63,7 @@ while attempts<6:
             break
     else:
         attempts += 1
-        print(f"Incorrect guess. You have {6 - attempts} attempts left.")
+        print(f"Incorrect guess. You have {6 - attempts} Lives left.")
 
 if masked_word(answer, guesses) != answer:
     print("\nGame over! The correct word was:", answer.capitalize())
