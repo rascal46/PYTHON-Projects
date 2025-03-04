@@ -40,6 +40,24 @@ while attempts<6:
 
     print("Guessed letters:", ' '.join(guesses) if guesses else "None")
 
+    '''
+    print() is a built-in Python function that outputs text to the console.
+    "Guessed letters:" is a string that serves as a label for the output.
+    ' '.join(guesses) is a method that:
+
+    Takes the list guesses
+    Joins all the elements of the list into a single string
+    Uses a space ' ' as the separator between each guessed letter
+
+
+    if guesses else "None" is a conditional expression that:
+
+    Checks if the guesses list is non-empty
+    If guesses contains elements, it uses ' '.join(guesses)
+    If guesses is empty, it uses the string "None"
+    
+    '''
+
 
     guess = input("Enter a letter: ").lower().strip()
 
