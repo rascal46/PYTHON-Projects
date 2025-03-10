@@ -1,6 +1,6 @@
 import sounddevice as sd
 from scipy.io.wavfile import write
-import NumPy as np
+import numpy as np
 
 def record(duration,filename):
     
