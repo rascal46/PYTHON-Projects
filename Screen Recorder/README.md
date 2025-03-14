@@ -1,0 +1,48 @@
+All necessary libraries are imported.
+
+
+Beginning:
+
+<UDF Record>
+
+pyautogui takes the screen size.
+
+this is then transferred to width and height variables
+
+fourcc decides video file format. these are XVID,MP4V,etc. The '*' divides it into 4 separate characters.
+
+an object (empty video file) called 'out' is created. 
+
+
+A for loop is created. it will run for (frame_rate x duration). this decides the number of frames.
+
+within one loop:
+
+	pyautogui takes a screenshot.
+
+	the ss is conerted to numpy array.
+
+	for cv to work on it, it is converted from RGB to BGR.
+
+	The now proccessed ss is added to object out.
+
+
+
+if __name__ == "__main__": 
+
+This ensures that the script only runs when executed directly (not when imported into another script).
+Whenever you run a Python script, Python sets a special variable called __name__. If you run
+the script directly → __name__ becomes "__main__". If the script is imported → __name__ becomes the name of the file instead of "__main__".
+
+
+filename is entered and concated with '.mp4'
+
+the FPS is set to 20
+
+duration of choice is entered
+
+the record udf is called.
+
+
+
+
