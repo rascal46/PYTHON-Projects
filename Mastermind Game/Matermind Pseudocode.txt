@@ -1,0 +1,64 @@
+# Import necessary modules
+Import random
+
+# Define function to generate a secret code
+Function generate_code():
+    Create a list of 4 random digits between 1 and 6
+    Return the list
+
+# Define function to get user input
+Function get_guess():
+    Repeat until valid guess is entered:
+        Prompt user to enter a 4-digit number
+        Convert input to a list of integers
+        If input is valid (4 digits, all between 1 and 6), return the list
+
+# Define function to provide feedback
+Function get_feedback(secret_code, user_guess):
+    Initialize correct_position_count to 0
+    Initialize correct_digit_count to 0
+
+    Create a copy of secret_code
+    Create a copy of user_guess
+
+    # First pass: Count correct digits in correct positions
+    For each index in range(4):
+        If user_guess[index] equals secret_code[index]:
+            Increment correct_position_count
+            Mark both elements as None to avoid duplicate checking
+
+    # Second pass: Count correct digits in wrong positions
+    For each digit in user_guess:
+        If digit is in secret_code and is not None:
+            Increment correct_digit_count
+            Remove digit from secret_code copy
+
+    Return (correct_position_count, correct_digit_count)
+
+# Define main game function
+Function play_mastermind():
+    Print "Welcome to Mastermind!"
+    secret_code = generate_code()
+    max_attempts = 10
+
+    For attempt in range(1, max_attempts + 1):
+        user_guess = get_guess()
+        correct_position, correct_digit = get_feedback(secret_code, user_guess)
+
+        Print "Attempt", attempt, ": Correct position =", correct_position, ", Correct digit =", correct_digit
+
+        If correct_position equals 4:
+            Print "Congratulations! You guessed the code!"
+            Return
+
+    Print "Game Over! The correct code was:", secret_code
+
+# Run the game
+play_mastermind()
+
+
+ChatGPT links:
+
+https://chatgpt.com/share/67d67a05-fcd0-8013-abf5-498af0dffe35
+
+https://chatgpt.com/share/67d67a2e-46e4-8013-8754-ed4edcecc3f2
