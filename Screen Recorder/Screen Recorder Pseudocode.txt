@@ -1,0 +1,24 @@
+1. import necessary libraries (cv2, numpy, pyautogui, and imageio)  
+
+2. define function record_screen(output_file, frame_rate, duration):  
+   2.1 set screen_size = get screen resolution (width, height)  
+   2.2 create video writer object using output_file, frame_rate, and screen_size  
+   2.3 for each frame in range(duration * frame_rate):  
+       2.3.1 capture screenshot using pyautogui  
+       2.3.2 convert screenshot to numpy array  
+       2.3.3 convert image color format to BGR (opencv format)  
+       2.3.4 write frame to video file  
+   2.4 release video writer  
+   2.5 print "recording complete"  
+
+3. if __name__ == "__main__":  
+   3.1 set output_file = "screen_record.mp4"  
+   3.2 set frame_rate = 20  
+   3.3 set duration = user input or predefined value  
+   3.4 call record_screen(output_file, frame_rate, duration)  
+
+ChatGPT Links:
+
+https://chatgpt.com/share/67d67aa2-1488-8013-9588-6af342130525
+
+https://chatgpt.com/share/67d67ac2-a060-8013-bd26-6ad7912bf178
