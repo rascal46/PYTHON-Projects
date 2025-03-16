@@ -1,0 +1,22 @@
+begin  
+import necessary libraries sounddevice scipy.io.wavfile numpy  
+
+define function record_audio duration filename  
+set sample_rate to 44100  
+print recording started  
+record audio using sounddevice for given duration at sample_rate  
+print recording stopped  
+save recorded audio as wav file using scipy.io.wavfile  
+end function  
+
+define function main  
+prompt user to enter recording duration  
+set filename to recorded_audio.wav  
+call record_audio with duration and filename  
+print recording saved as recorded_audio.wav  
+end function  
+
+call main  
+end  
+
+ChatGPT: https://chatgpt.com/c/67cd9453-e924-8013-aa28-d5588f58714d
